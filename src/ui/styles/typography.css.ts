@@ -29,6 +29,7 @@ export const typography = recipe({
         color: vars.colors.dustyBlue,
         fontSize: '18px',
         lineHeight: '28px',
+        fontFamily: 'var(--fixel-text)',
       },
     },
   },

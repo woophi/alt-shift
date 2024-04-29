@@ -1,7 +1,7 @@
 import { cn } from '@/core/utils/cn';
 import { Header } from '@/modules/header';
 import { BaseLayout } from '@/ui/base';
-import { fixelDisplay } from '@/ui/font';
+import { fixelDisplay, fixelText } from '@/ui/font';
 import { themeClass } from '@/ui/styles/theme.css';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(fixelDisplay.className, themeClass)}>
+      <body className={cn(fixelDisplay.variable, fixelText.variable, themeClass)}>
         <BaseLayout header={<Header />}>{children}</BaseLayout>
       </body>
     </html>
