@@ -8,7 +8,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--as-fixel-display);
+  font-family: var(--fixel-display);
+  background-color: #fff;
 }
 
 a {

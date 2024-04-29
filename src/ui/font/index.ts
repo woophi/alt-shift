@@ -29,5 +29,5 @@ export const fixelDisplay = localFont({
     },
   ],
   preload: true,
-  variable: '--as-fixel-display',
+  variable: '--fixel-display',
 });
