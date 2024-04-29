@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@vanilla-extract/css": "^1.15.0",
+    "@vanilla-extract/recipes": "^0.5.2",
+    "critters": "^0.0.22",
+    "effector": "^23.2.1",
+    "effector-react": "^23.2.0",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.3",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vanilla-extract/next-plugin": "^2.4.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "prettier": "^3.2.5",
