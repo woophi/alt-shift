@@ -49,7 +49,7 @@ export const fixelText = localFont({
       style: 'normal',
     },
     {
-      path: './text/semibold.woff2',
+      path: './text/semiBold.woff2',
       weight: '600',
       style: 'normal',
     },
