@@ -1,4 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+const withVanillaExtract = createVanillaExtractPlugin();
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    optimizeCss: true
+  }
+};
+
+export default withVanillaExtract(nextConfig);
