@@ -1,4 +1,4 @@
-import { GeneratorForm } from '@/modules/generator/Form';
+import { GeneratorForm } from '@/modules/generator';
 
 const Generator = () => {
   return <GeneratorForm />;

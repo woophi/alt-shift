@@ -1,1 +1,1 @@
-export * from './GeneratorLayout';
+export * from './GeneratorForm';
