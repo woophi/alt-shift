@@ -35,12 +35,12 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
         {...rest}
         ref={ref}
       >
-        {icon && (
+        {(icon || loading) && (
           <Image
             src={`/icons/${loading ? 'loading' : icon}.svg`}
             width={iconSizes[size].w}
             height={iconSizes[size].h}
-            alt={icon}
+            alt={icon ?? 'loading icon'}
             className={loading ? btnStyles.loadingIcon : undefined}
           />
         )}

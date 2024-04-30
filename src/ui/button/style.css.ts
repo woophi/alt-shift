@@ -59,6 +59,7 @@ const button = recipe({
       secondary: {
         backgroundColor: vars.colors.white,
         border: `1px solid ${vars.colors.doveGray}`,
+        color: vars.colors.slateBlue,
         selectors: {
           '&:hover:not(:disabled)': {
             backgroundColor: vars.colors.hoverWhite,
