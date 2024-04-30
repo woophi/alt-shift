@@ -63,6 +63,20 @@ export const typography = recipe({
         color: vars.colors.vermilion,
       },
     },
+    overflow: {
+      ellipsis: {
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis',
+      },
+      ellipsis4lines: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        WebkitLineClamp: 4,
+        WebkitBoxOrient: 'vertical',
+        display: '-webkit-box',
+      },
+    },
   },
   defaultVariants: {
     weight: 400,
