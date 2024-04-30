@@ -13,6 +13,13 @@ export const [themeClass, vars] = createTheme({
     hoverWhite: 'rgba(215, 217, 223, .3)',
     dustyLavenderBlue: '#98A2B3',
     whisperWhite: '#EDFCF2',
+    downy: '#73E2A3',
+    mouseGray: '#475467',
+    lightCoral: '#FDA29B',
+    mintGreen: '#D3F8DF',
+    lightPeach: '#FEE4E2',
+    vermilion: '#F04438',
+    lightSilverGray: '#F2F4F7',
   },
   sizes: {
     mw: '1120px',
