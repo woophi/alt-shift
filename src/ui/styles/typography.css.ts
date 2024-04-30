@@ -64,11 +64,6 @@ export const typography = recipe({
       },
     },
     overflow: {
-      ellipsis: {
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis',
-      },
       ellipsis4lines: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',

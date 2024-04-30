@@ -1,7 +1,7 @@
 'use client';
 import { typography } from '@/ui/styles/typography.css';
 import { useUnit } from 'effector-react';
-import { CopyItem } from './CopyItem';
+import { CopyItem } from '../copy-item';
 import { generateTextFX } from './api/effects';
 import { $generatorStore } from './api/store';
 import { generatorStyles } from './style.css';
@@ -24,7 +24,7 @@ export const GeneratedText = () => {
                 : 'Your personalized job application will appear here...',
             }}
           />
-          <CopyItem />
+          <CopyItem className={generatorStyles.copyItem} copyValue={generatedText} />
         </>
       )}
     </div>

@@ -1,7 +1,7 @@
-import { GeneratorLayout } from '@/modules/generator';
+import { GeneratorForm } from '@/modules/generator/Form';
 
 const Generator = () => {
-  return <GeneratorLayout />;
+  return <GeneratorForm />;
 };
 
 export default Generator;

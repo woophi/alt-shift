@@ -2,7 +2,8 @@ import { routes } from '@/core/routes';
 import { Button } from '@/ui/button';
 import { typography } from '@/ui/styles/typography.css';
 import Link from 'next/link';
-import { GoalBanner } from './GoalBanner';
+import { GoalBanner } from '../goal-banner';
+import { Applications } from './Applications';
 import { homeStyles } from './style.css';
 
 export const HomeLayout = () => {
@@ -16,6 +17,7 @@ export const HomeLayout = () => {
         </Link>
       </div>
 
+      <Applications />
       <GoalBanner />
     </div>
   );

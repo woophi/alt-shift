@@ -9,27 +9,47 @@ const headContainer = style({
   borderBottom: `1px solid ${vars.colors.athensGray}`,
 });
 
-const contentContainer = style({
-  padding: '54px 64px',
-  borderRadius: '12px',
-  backgroundColor: vars.colors.whisperWhite,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginTop: '48px',
-});
-const contentInner = style({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  textAlign: 'center',
+const applicationsContainer = style({
+  display: 'grid',
+  width: '100%',
+  gridTemplateColumns: 'repeat(2, 1fr)',
   gap: '16px',
-  maxWidth: '480px',
+  marginTop: '24px',
+});
+const application = style({
+  padding: '24px',
+  borderRadius: '12px',
+  backgroundColor: vars.colors.lightSilverGray,
+});
+
+const applicationText = style({
+  maskImage: `linear-gradient(0deg, rgba(242, 244, 247, 0) 0%, ${vars.colors.lightSilverGray} 30%)`,
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  WebkitLineClamp: 6,
+  WebkitBoxOrient: 'vertical',
+  display: '-webkit-box',
+});
+const applicationFooter = style({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  marginTop: '16px',
+});
+
+const deleteContainer = style({
+  color: vars.colors.mouseGray,
+  display: 'flex',
+  gap: '8px',
+  cursor: 'pointer',
+  height: '24px',
 });
 
 export const homeStyles = {
   headContainer,
-  contentContainer,
-  contentInner,
+  applicationsContainer,
+  application,
+  applicationText,
+  applicationFooter,
+  deleteContainer,
 };

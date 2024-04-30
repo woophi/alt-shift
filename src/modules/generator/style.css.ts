@@ -47,26 +47,6 @@ const grid2c = style({
   gap: '16px',
 });
 
-const copyContainer = recipe({
-  base: {
-    color: vars.colors.mouseGray,
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    cursor: 'pointer',
-    marginTop: '16px',
-    marginLeft: 'auto',
-  },
-  variants: {
-    noValue: {
-      true: {
-        cursor: 'not-allowed',
-        opacity: 0.48,
-      },
-    },
-  },
-});
-
 const bounceAnimation = keyframes({
   '0%': {
     transform: 'translateY(0)',
@@ -91,12 +71,23 @@ const ball = style({
   margin: 'auto',
 });
 
+const copyItem = style({
+  marginTop: '16px',
+  marginLeft: 'auto',
+});
+
+const banner = style({
+  marginTop: '16px !important',
+  gridColumn: 'span 2',
+});
+
 export const generatorStyles = {
   container,
   form,
   head,
   grid2c,
   text,
-  copyContainer,
   ball,
+  copyItem,
+  banner,
 };
