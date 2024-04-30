@@ -1,5 +1,5 @@
 import { vars } from '@/ui/styles/theme.css';
-import { style } from '@vanilla-extract/css';
+import { keyframes, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
 const container = style({
@@ -55,6 +55,30 @@ const copyContainer = style({
   marginLeft: 'auto',
 });
 
+const bounceAnimation = keyframes({
+  '0%': {
+    transform: 'translateY(0)',
+    opacity: 0.48,
+  },
+  '50%': {
+    transform: 'translateY(-14px)',
+    opacity: 1,
+  },
+  '100%': {
+    transform: 'translateY(0px)',
+    opacity: 0.48,
+  },
+});
+const ball = style({
+  width: '80px',
+  height: '80px',
+  background: `radial-gradient(100% 100% at 0% 0%, ${vars.colors.white} 0%, ${vars.colors.doveGray} 100%)`,
+  borderRadius: '50%',
+  boxShadow: '0px -2px 32px 0px #10182814 inset',
+  animation: `${bounceAnimation} 1.5s linear infinite`,
+  margin: 'auto',
+});
+
 export const generatorStyles = {
   container,
   form,
@@ -62,4 +86,5 @@ export const generatorStyles = {
   grid2c,
   text,
   copyContainer,
+  ball,
 };
