@@ -17,6 +17,7 @@ export const [themeClass, vars] = createTheme({
     mouseGray: '#475467',
     lightCoral: '#FDA29B',
     mintGreen: '#D3F8DF',
+    mintGreen2: '#D1FADF',
     lightPeach: '#FEE4E2',
     vermilion: '#F04438',
     lightSilverGray: '#F2F4F7',
