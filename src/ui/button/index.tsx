@@ -28,15 +28,23 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
   ({ className, fullWidth, icon, loading, size = 'm', variant, disabled, children, onClick, ...rest }, ref) => {
     return (
       <button
-        disabled={disabled || !!loading}
-        className={cn(btnStyles.button({ size, variant, fullWidth }), className)}
+        disabled={disabled}
+        className={cn(btnStyles.button({ size, variant, fullWidth, loading }), className)}
         onClick={disabled || !!loading ? undefined : onClick}
         type="button"
         {...rest}
         ref={ref}
       >
-        {icon && <Image src={`/icons/${icon}.svg`} width={iconSizes[size].w} height={iconSizes[size].h} alt={icon} />}
-        <span>{children}</span>
+        {icon && (
+          <Image
+            src={`/icons/${loading ? 'loading' : icon}.svg`}
+            width={iconSizes[size].w}
+            height={iconSizes[size].h}
+            alt={icon}
+            className={loading ? btnStyles.loadingIcon : undefined}
+          />
+        )}
+        {!loading && <span>{children}</span>}
       </button>
     );
   },

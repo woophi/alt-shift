@@ -1,5 +1,7 @@
+import { HomeLayout } from '@/modules/home/HomeLayout';
+
 const Home = () => {
-  return <main>hello world</main>;
+  return <HomeLayout />;
 };
 
 export default Home;

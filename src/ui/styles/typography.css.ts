@@ -29,11 +29,29 @@ export const typography = recipe({
         color: vars.colors.dustyBlue,
         fontSize: '18px',
         lineHeight: '28px',
+      },
+      h1: {
+        fontSize: '48px',
+        lineHeight: '60px',
+        letterSpacing: '-0.02em',
+      },
+      h2: {
+        fontSize: '36px',
+        lineHeight: '44px',
+        letterSpacing: '-0.02em',
+      },
+    },
+    font: {
+      text: {
         fontFamily: 'var(--fixel-text)',
+      },
+      display: {
+        fontFamily: 'var(--fixel-display)',
       },
     },
   },
   defaultVariants: {
     weight: 400,
+    font: 'display',
   },
 });

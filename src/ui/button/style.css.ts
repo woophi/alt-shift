@@ -1,3 +1,4 @@
+import { keyframes, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 import { vars } from '../styles/theme.css';
 
@@ -14,7 +15,7 @@ const button = recipe({
     flexShrink: 0,
     borderRadius: '6px',
     justifyContent: 'center',
-    fontWeight: 600,
+    fontWeight: 500,
     selectors: {
       '&:disabled': {
         cursor: 'not-allowed',
@@ -77,7 +78,31 @@ const button = recipe({
         width: 'auto',
       },
     },
+    loading: {
+      true: {
+        cursor: 'progress',
+      },
+    },
   },
+  compoundVariants: [
+    {
+      variants: {
+        loading: true,
+        variant: 'primary',
+      },
+      style: {
+        selectors: {
+          '&:hover:not(:disabled)': {
+            backgroundColor: vars.colors.teal,
+          },
+          '&:active:not(:disabled)': {
+            backgroundColor: vars.colors.teal,
+            transform: 'none',
+          },
+        },
+      },
+    },
+  ],
   defaultVariants: {
     size: 'm',
     variant: 'primary',
@@ -85,6 +110,17 @@ const button = recipe({
   },
 });
 
+const spinning = keyframes({
+  '100%': {
+    transform: 'rotate(360deg)',
+  },
+});
+
+const loadingIcon = style({
+  animation: `${spinning} 1.5s linear infinite`,
+});
+
 export const btnStyles = {
   button,
+  loadingIcon,
 };
