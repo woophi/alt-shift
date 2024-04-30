@@ -1,4 +1,5 @@
 import { vars } from '@/ui/styles/theme.css';
+import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
 const container = recipe({
@@ -64,8 +65,19 @@ const point = recipe({
   },
 });
 
+const checkCircle = style({
+  width: '28px',
+  height: '28px',
+  borderRadius: '50%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: vars.colors.mintGreen2,
+});
+
 export const pointsStyles = {
   point,
   points,
   container,
+  checkCircle,
 };
