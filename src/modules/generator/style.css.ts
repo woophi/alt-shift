@@ -29,6 +29,8 @@ const head = recipe({
     color: vars.colors.darkNavy,
     paddingBottom: '12px',
     borderBottom: `1px solid ${vars.colors.athensGray}`,
+    textTransform: 'capitalize',
+    maxWidth: '544px',
   },
   variants: {
     placeholder: {
@@ -45,14 +47,24 @@ const grid2c = style({
   gap: '16px',
 });
 
-const copyContainer = style({
-  color: vars.colors.mouseGray,
-  display: 'flex',
-  alignItems: 'center',
-  gap: '8px',
-  cursor: 'pointer',
-  marginTop: '16px',
-  marginLeft: 'auto',
+const copyContainer = recipe({
+  base: {
+    color: vars.colors.mouseGray,
+    display: 'flex',
+    alignItems: 'center',
+    gap: '8px',
+    cursor: 'pointer',
+    marginTop: '16px',
+    marginLeft: 'auto',
+  },
+  variants: {
+    noValue: {
+      true: {
+        cursor: 'not-allowed',
+        opacity: 0.48,
+      },
+    },
+  },
 });
 
 const bounceAnimation = keyframes({

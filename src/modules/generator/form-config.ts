@@ -1,7 +1,7 @@
+import { NewApplicationData } from '@/core/contracts';
 import * as yup from 'yup';
-import { GeneratorFormData } from './types';
 
-export const schemaGeneratorForm: yup.ObjectSchema<GeneratorFormData> = yup
+export const schemaGeneratorForm: yup.ObjectSchema<NewApplicationData> = yup
   .object({
     jobTitle: yup.string().required(),
     company: yup.string().required(),
