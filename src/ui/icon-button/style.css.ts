@@ -18,10 +18,11 @@ const btn = style({
   transition: 'all .2s ease-in-out',
   selectors: {
     '&:active:not(:disabled)': {
+      backgroundColor: vars.colors.white,
       transform: 'translateY(1px)',
     },
     '&:hover:not(:disabled)': {
-      backgroundColor: 'rgba(215, 217, 223, .3)',
+      backgroundColor: vars.colors.hoverWhite,
     },
   },
 });
