@@ -30,6 +30,10 @@ export const typography = recipe({
         fontSize: '18px',
         lineHeight: '28px',
       },
+      body: {
+        fontSize: '16px',
+        lineHeight: '24px',
+      },
       h1: {
         fontSize: '48px',
         lineHeight: '60px',
@@ -40,6 +44,11 @@ export const typography = recipe({
         lineHeight: '44px',
         letterSpacing: '-0.02em',
       },
+      hint: {
+        fontSize: '14px',
+        lineHeight: '20px',
+        color: vars.colors.mouseGray,
+      },
     },
     font: {
       text: {
@@ -47,6 +56,11 @@ export const typography = recipe({
       },
       display: {
         fontFamily: 'var(--fixel-display)',
+      },
+    },
+    error: {
+      true: {
+        color: vars.colors.vermilion,
       },
     },
   },
