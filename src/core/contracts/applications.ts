@@ -6,4 +6,5 @@ export type NewApplicationData = {
 };
 export type ApplicationData = NewApplicationData & {
   id: number;
+  personalizedApplicationText: string;
 };

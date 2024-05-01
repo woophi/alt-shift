@@ -5,6 +5,9 @@ const withVanillaExtract = createVanillaExtractPlugin();
 const nextConfig = {
   experimental: {
     optimizeCss: true
+  },
+  serverRuntimeConfig: {
+    openAiKey: process.env.OPEN_AI_KEY,
   }
 };
 

@@ -1,7 +1,6 @@
 'use client';
 import { deleteApplicationFX } from '@/core/applications/effects';
 import { $applicationsStore } from '@/core/applications/store';
-import { textTemplate } from '@/core/applications/template';
 import { cn } from '@/core/utils/cn';
 import { typography } from '@/ui/styles/typography.css';
 import { useUnit } from 'effector-react';
@@ -23,7 +22,7 @@ export const Applications = () => {
           <p
             className={cn(typography({ variant: 'caption', font: 'text' }), homeStyles.applicationText)}
             dangerouslySetInnerHTML={{
-              __html: textTemplate(application).replaceAll('\n', '<br />'),
+              __html: application.personalizedApplicationText.replaceAll('\n', '<br />'),
             }}
           />
           <div className={homeStyles.applicationFooter}>
@@ -32,7 +31,7 @@ export const Applications = () => {
               <p className={typography({ variant: 'body', font: 'text', weight: 600 })}>Delete</p>
             </div>
 
-            <CopyItem copyValue={textTemplate(application)} />
+            <CopyItem copyValue={application.personalizedApplicationText} />
           </div>
         </div>
       ))}
