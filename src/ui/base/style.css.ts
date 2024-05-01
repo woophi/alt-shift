@@ -9,6 +9,12 @@ const container = style({
   justifyContent: 'center',
   gap: '32px',
   padding: '32px',
+  '@media': {
+    'screen and (max-width: 768px)': {
+      padding: '16px',
+      gap: '16px',
+    },
+  },
 });
 const main = style({
   width: '100%',

@@ -29,20 +29,43 @@ export const typography = recipe({
         color: vars.colors.dustyBlue,
         fontSize: '18px',
         lineHeight: '28px',
+        '@media': {
+          'screen and (max-width: 768px)': {
+            fontSize: '16px',
+            lineHeight: '24px',
+          },
+        },
       },
       body: {
         fontSize: '16px',
         lineHeight: '24px',
+        '@media': {
+          'screen and (max-width: 768px)': {
+            fontSize: '14px',
+          },
+        },
       },
       h1: {
         fontSize: '48px',
         lineHeight: '60px',
         letterSpacing: '-0.02em',
+        '@media': {
+          'screen and (max-width: 768px)': {
+            fontSize: '36px',
+            lineHeight: '44px',
+          },
+        },
       },
       h2: {
         fontSize: '36px',
         lineHeight: '44px',
         letterSpacing: '-0.02em',
+        '@media': {
+          'screen and (max-width: 768px)': {
+            fontSize: '24px',
+            lineHeight: '32px',
+          },
+        },
       },
       hint: {
         fontSize: '14px',

@@ -7,6 +7,12 @@ const container = style({
   width: '100%',
   gridTemplateColumns: 'repeat(2, 1fr)',
   gap: '32px',
+  '@media': {
+    'screen and (max-width: 1024px)': {
+      gridTemplateColumns: '1fr',
+      gap: '16px',
+    },
+  },
 });
 
 const form = style({
@@ -22,6 +28,13 @@ const text = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
+  wordBreak: 'break-all',
+  minHeight: '350px',
+  '@media': {
+    'screen and (max-width: 768px)': {
+      padding: '16px',
+    },
+  },
 });
 
 const head = recipe({
@@ -31,6 +44,7 @@ const head = recipe({
     borderBottom: `1px solid ${vars.colors.athensGray}`,
     textTransform: 'capitalize',
     maxWidth: '544px',
+    wordBreak: 'break-all',
   },
   variants: {
     placeholder: {
@@ -45,6 +59,11 @@ const grid2c = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   gap: '16px',
+  '@media': {
+    'screen and (max-width: 768px)': {
+      gridTemplateColumns: '1fr',
+    },
+  },
 });
 
 const bounceAnimation = keyframes({
@@ -79,6 +98,12 @@ const copyItem = style({
 const banner = style({
   marginTop: '16px !important',
   gridColumn: 'span 2',
+  '@media': {
+    'screen and (max-width: 768px)': {
+      marginTop: '0 !important',
+      gridColumn: 'unset',
+    },
+  },
 });
 
 export const generatorStyles = {

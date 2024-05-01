@@ -7,6 +7,8 @@ const headContainer = style({
   alignItems: 'center',
   paddingBottom: '16px',
   borderBottom: `1px solid ${vars.colors.athensGray}`,
+  flexWrap: 'wrap',
+  gap: '8px',
 });
 
 const applicationsContainer = style({
@@ -15,11 +17,22 @@ const applicationsContainer = style({
   gridTemplateColumns: 'repeat(2, 1fr)',
   gap: '16px',
   marginTop: '24px',
+  '@media': {
+    'screen and (max-width: 768px)': {
+      gridTemplateColumns: '1fr',
+      marginTop: '16px',
+    },
+  },
 });
 const application = style({
   padding: '24px',
   borderRadius: '12px',
   backgroundColor: vars.colors.lightSilverGray,
+  '@media': {
+    'screen and (max-width: 768px)': {
+      padding: '12px',
+    },
+  },
 });
 
 const applicationText = style({
@@ -29,6 +42,7 @@ const applicationText = style({
   WebkitLineClamp: 6,
   WebkitBoxOrient: 'vertical',
   display: '-webkit-box',
+  wordBreak: 'break-all',
 });
 const applicationFooter = style({
   display: 'flex',

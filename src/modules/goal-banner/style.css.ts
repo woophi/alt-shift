@@ -9,6 +9,12 @@ const contentContainer = style({
   alignItems: 'center',
   justifyContent: 'center',
   marginTop: '48px',
+  '@media': {
+    'screen and (max-width: 768px)': {
+      marginTop: '32px',
+      padding: '27px 32px',
+    },
+  },
 });
 const contentInner = style({
   display: 'flex',
