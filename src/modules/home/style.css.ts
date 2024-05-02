@@ -15,12 +15,14 @@ const applicationsContainer = style({
   display: 'grid',
   width: '100%',
   gridTemplateColumns: 'repeat(2, 1fr)',
-  gap: '16px',
+  columnGap: '16px',
+  rowGap: '24px',
   marginTop: '24px',
   '@media': {
     'screen and (max-width: 768px)': {
       gridTemplateColumns: '1fr',
       marginTop: '16px',
+      rowGap: '16px',
     },
   },
 });
