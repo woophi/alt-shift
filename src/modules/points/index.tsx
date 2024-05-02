@@ -1,5 +1,5 @@
 'use client';
-import { $applicationsStore } from '@/core/applications/store';
+import { $applicationsStore, initApplications } from '@/core/applications/store';
 import { typography } from '@/ui/styles/typography.css';
 import { useUnit } from 'effector-react';
 import Image from 'next/image';
@@ -18,6 +18,10 @@ export const Ponits = ({ variant }: Props) => {
   const { applicationsNumber } = useUnit($applicationsStore);
   const isFlattened = variant === 'flattened';
   const isGoalAchived = applicationsNumber >= APPLICATIONS_GOAL_COUNT;
+
+  useEffect(() => {
+    initApplications();
+  }, []);
 
   useEffect(() => {
     setGoal(v => v.map((_, index) => (applicationsNumber >= index + 1 ? 1 : 0)));
