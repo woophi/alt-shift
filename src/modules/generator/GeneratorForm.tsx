@@ -6,7 +6,7 @@ import { TextField } from '@/ui/inputs/TextField';
 import { typography } from '@/ui/styles/typography.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useUnit } from 'effector-react';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { GoalBanner } from '../goal-banner';
 import { GeneratedText } from './GeneratedText';
@@ -32,6 +32,13 @@ export const GeneratorForm = () => {
 
   const [jobTitleValue, companyValue] = watch(['jobTitle', 'company']);
   const isCompleteApplicationTitle = !!jobTitleValue && !!companyValue;
+
+  useEffect(
+    () => () => {
+      $generatorStore.reinit();
+    },
+    [],
+  );
 
   const resetFormAndState = useCallback(() => {
     reset();
