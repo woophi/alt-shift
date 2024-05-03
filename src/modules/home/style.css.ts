@@ -44,7 +44,7 @@ const applicationText = style({
   WebkitLineClamp: 6,
   WebkitBoxOrient: 'vertical',
   display: '-webkit-box',
-  wordBreak: 'break-all',
+  wordBreak: 'break-word',
 });
 const applicationFooter = style({
   display: 'flex',

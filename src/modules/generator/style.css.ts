@@ -28,7 +28,7 @@ const text = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  wordBreak: 'break-all',
+  wordBreak: 'break-word',
   minHeight: '350px',
   '@media': {
     'screen and (max-width: 768px)': {
@@ -44,7 +44,7 @@ const head = recipe({
     borderBottom: `1px solid ${vars.colors.athensGray}`,
     textTransform: 'capitalize',
     maxWidth: '544px',
-    wordBreak: 'break-all',
+    wordBreak: 'break-word',
   },
   variants: {
     placeholder: {
